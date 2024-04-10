@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt",
     "django_filters",
     "apps.users.apps.UsersConfig",
+    "apps.contracts.apps.ContractsConfig",
 ]
 
 MIDDLEWARE = [
@@ -92,7 +93,7 @@ DATABASES = {
     }
 }
 
-# DATABASES["default"] = dj_database_url.parse(str(os.getenv("POSTGRES_URL")))
+DATABASES["default"] = dj_database_url.parse(str(os.getenv("POSTGRES_URL")))
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
